@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Droid+Serif:400,700);
+/*font-family: 'Droid Serif', Veranda, Times, serif;*/
+
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, ol, form, fieldset, input, label, table, tbody, tfoot, th, tr, td, textarea, select, secion, div, img {
+font-weight: normal;
+color: #444;
+padding: 0;
+border: 0;
+margin: 0;
+font-family: "Source Code Pro", Helvetica, sans-serif;
+line-height: 1.2;
+font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	color: 	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #038DE7;
+}
+
+html, body {
+	height: 100%;
+}
+
+
+.hm-shell-map {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;	
+}
+
+	
+.hm-shell-header {
+	position: fixed;
+	width: 100%;
+	top:0;
+	height: 50px;
+	background-color: #fff;	
+	z-index: 1;
+	border-bottom: 1px solid #ccc;
+}
+.hm-shell-header-logo { 
+	position:absolute;
+	text-align: center;
+	color: #777;
+	font-size: 20px;
+	letter-spacing: 6px;
+	top: 14px;
+	left: 200px;
+	right: 200px;
+	min-width: 368px;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.hm-shell-header-menu-btn {
+	position: absolute;
+	left: 16px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	line-height: 1;
+	font-size: 30px;	
+	border: 1px #eee solid;
+	text-align: center;
+	
+}
+
+
+.hm-shell-header-menu-btn:hover {
+	cursor: pointer;
+	color: 	#038DE7;
+}
+
+.hm-shell-menu {
+	z-index: 1;	
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	bottom: 0px;
+	background-color: #ddd;
+}
+/* HM utility classes */
+.hidden {
+	display: none;
+}
+

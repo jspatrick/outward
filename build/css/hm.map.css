@@ -1,0 +1,92 @@
+.hm-map-canvas-container {
+	position: fixed;
+	height: 100%;
+	right: 300px;
+	top: 50px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.hm-map-canvas {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.hm-map-places {
+	position: absolute;
+	right: 0;
+	width: 300px;;
+	background-color: #eee;
+}
+
+.hm-map-label {	
+	font-size: 18px;
+	margin-left: -12px;
+	background-color: #fff;
+	opacity: .7;
+	padding: 6px;
+	border-radius: 3px;
+}
+
+.hm-map-places-place {
+	margin: 10px;
+	position: relative;
+	min-width: 250px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.hm-map-places-place-key-wrapper {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0px;
+	left: 0px;
+	border-radius: 20px;
+	border: 1px dashed #ccc;
+	background-color: #fff;
+}
+
+.hm-map-places-place-key{
+	margin-top: 12px;
+	text-align: center;
+	color: #ccc;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: sans-serif;
+	line-height: 1;
+}
+
+.hm-map-places-place-info {
+	position: absolute;
+	left: 50px;
+	margin-right:20px;
+	margin-left:10px;
+}
+
+.hm-map-places-place-remove {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 15px;
+	width: 15px;
+}
+
+hm-map-places-place-name {	
+
+}
+
+.hm-map-places-place-address {
+	font-size: 10px;
+	color: #999;
+}
+
+.hm-map-places-place-distance {
+	font-size: 10px;
+	color: #999;
+	position: absolute;
+	width: 50px;
+	text-align: center;
+	bottom: 0;
+	left: 0;
+}

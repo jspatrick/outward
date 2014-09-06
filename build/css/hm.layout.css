@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, ol, form, fieldset, input, label, table, tbody, tfoot, th, tr, td, textarea, select, secion, div, img {
+font-weight: normal;
+padding: 0;
+border: 0;
+margin: 0;
+font-family: Helvetica, sans-serif;
+line-height: 1.2;
+font-size: 14px;
+}
+
+body {
+	color: #444;
+}
+
+.hm-header {
+	color: #ccc;
+	background-color: #777;
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
+
+.hm-header-logo {
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	font-weight: 700;
+	left: 50%;
+	top: 0;
+	font-size: 20px;
+	letter-spacing: 0.33em;
+	line-height: 1;
+	margin-top: 15px;
+	margin-left: -100px;
+}
+
+.hm-header-menu-btn {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	line-height: 1;
+	font-size: 20px;
+	cursor: pointer;	
+}
+
+.hm-header-menu-btn:hover {
+	color: #eee;
+}
+
+/* map */
+
+.hm-map {
+	position: absolute;
+	top: 50px;
+	right: 25%;
+	left: 0;
+	min-height: 500px;
+	background-color: #bbb;
+}
+
+
+/* locations */
+
+.hm-locations-list {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	left: 75%;
+	background-color: #444;
+	min-height: 500px;
+}
+
+.hm-location {
+	position: relative;
+	background-color: #fff;
+	margin: 10px;
+	height: 40px;
+}
+
+.hm-location-id {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	bottom: 10px;
+	line-height: 1;
+	
+	
+	font-size: 20px;
+}
+
+.hm-location-data {
+
+}
+
+.hm-location-even {
+	background-color: #ddd;
+}

@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+
+
+.hm-menu-section {
+	margin-bottom: 14px;
+	position: relative;
+	width: 100%;
+}
+
+.hm-menu-section-body {
+	width: 100%;
+	margin-left: 12px;
+}
+
+.hm-menu-section input {
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-family: Helvetica, sans-serif;
+	padding: 5px;
+}
+
+.hm-menu-section input:focus {
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	outline: none;
+
+}
+
+
+.hm-menu-section-header {
+	height: 30px;
+	border-bottom: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 6px;
+
+}
+
+.hm-menu-section-header-title {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	font-size: 12px;
+	color: #777;
+	text-transform: uppercase;
+}
+
+.hm-menu-locations-header-add-btn, 
+.hm-menu-locations-loc-remove-btn {
+	color: #0072bc;
+	position: absolute;
+	right: 12px;
+	top: 6px;
+	font-size: 14px;
+	width: 18px;
+	height: 18px;
+	border-radius: 2px;	
+	border: 1px #999 solid;
+	text-align: center;
+}
+
+.hm-menu-locations-header-add-btn {
+
+}
+.hm-menu-locations-header-add-btn:hover {
+	cursor: pointer;
+	border-color: #038DE7;
+	color: #038DE7;
+}
+
+.hm-menu-locations-list {
+	position: absolute;
+	left: 12px;
+	top: 34px;
+	right: 0px;
+	list-style: none;
+}
+
+.hm-menu-locations-loc {
+	position: relative;
+	margin-top: 12px;
+}
+
+.hm-menu-locations-loc:first {
+	margin-top: -12px;
+}
+
+.hm-menu-locations-loc-name {
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 8px;
+}
+
+
+.hm-menu-locations-loc-addr {
+	color: #777;
+	font-size: 10px;
+}
+
+.hm-menu-locations-loc-remove-btn {
+	top: 0px;
+	color: #ce125d;
+}
+
+.hm-menu-locations-loc-remove-btn:hover {
+	cursor: pointer;
+	border-color: #ce125d;
+	color: #ce125d;
+}
+
