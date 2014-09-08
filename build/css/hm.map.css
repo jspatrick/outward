@@ -64,6 +64,12 @@
 	margin-left:10px;
 }
 
+.hm-map-place-remove {
+	cursor: pointer;
+}
+.hm-map-place-remove:hover {
+	text-color: 
+}
 .hm-map-places-place-remove {
 	position: absolute;
 	right: 0;

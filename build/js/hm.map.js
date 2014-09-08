@@ -136,8 +136,8 @@ hm.map = (function() {
 			map: map,
 			position: location,
 			draggable: false,
-			labelAnchor: google.maps.Point(-(configMap.marker_label_width / 2), -5),
-			labelContent: label,
+			labelAnchor: google.maps.Point(25, 0),
+			labelContent: "",
 			labelClass: configMap.marker_label_class
 		});
 
@@ -242,7 +242,7 @@ hm.map = (function() {
 
 			for (var i = 0; i < results.length; i++) {
 				var place = results[i],
-					place_id = hm.util.getUUID(),
+					//place_id = hm.util.getUUID(),
 					is_last = i === (results.length - 1) ? true : false,
 					place_info;
 
@@ -252,7 +252,7 @@ hm.map = (function() {
 							  'name': place.name,
 							  'place_type': '',
 							  'origin_distance': '',
-							  'id': place_id};
+							  'id': place.place_id};
 
 				
 				function set_distance(place_info, is_last){
@@ -318,7 +318,6 @@ hm.map = (function() {
 	//Handlers
 	onRemovePlaceClicked = function(event){
 		event.preventDefault();
-		console.log(event);
 		var $target = $(event.target),
 			id;
 		id = $target.parent().attr('id');

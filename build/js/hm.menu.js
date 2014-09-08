@@ -99,16 +99,24 @@ hm.menu = (function() {
 		- 'unsaved'
 	    - 'invalid'
 	*/
+	function escapeRegExp(string) {
+		return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+	}
+
+	function replaceAll(string, find, replace) {
+		return string.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+	}
+
 	setDownloadLink = function(place_info)
 	{
 		console.log("Setting download link:", place_info);
 
-		var new_row = "%0A",
-			new_col = "%2C",
+		var new_row = "%0A", //lf
+			new_col = "%09", //tab
 			link_text = "data:application/octet-stream,",
-			columns = ["name", "address", "city", "origin_distance"],
-			i, place, key;
-
+			columns = ["name", "address", "origin_distance"],
+			i, place, key, text;
+		
 		for (i=0; i < columns.length; ++i) {
 			if (i === columns.length - 1){
 				link_text += columns[i] + new_row;
@@ -123,7 +131,7 @@ hm.menu = (function() {
 			{
 				place = place_info[key];
 				for (i=0; i<columns.length; ++i){
-					link_text += place[columns[i]];
+					link_text += replaceAll(place[columns[i]], ' ', '%20');
 					if (i === columns.length - 1){
 						link_text += new_row;
 					} else {
@@ -218,8 +226,7 @@ hm.menu = (function() {
 		console.log(place_info);
 		var addr = place_info.address,
 			name = place_info.name,
-			dist = place_info.origin_distance,
-			id = place_info.id;
+			dist = place_info.origin_distance;
 		
 		var $newPlace = $(configMap.location_html);
 		$newPlace.find('.hm-locations-loc-name').html(name);

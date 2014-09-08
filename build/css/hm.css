@@ -82,7 +82,7 @@ html, body {
 
 .hm-shell-menu {
 	z-index: 1;	
-	position: absolute;
+	position: fixed;
 	top: 50px;
 	left: 0px;
 	bottom: 0px;

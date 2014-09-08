@@ -14,16 +14,14 @@
 
 .hm-menu-section input {
 	height: 30px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	border-bottom: 3px solid #aaa;
 	padding: 5px;
 }
 
 .hm-menu-section input:focus {
-	height: 30px;
-	border-radius: 4px;
-	border: 1px solid #aaa;
+	border-bottom-color: #E49C03;
+	background-color: #FCF5C4;
 	outline: none;
 
 }
