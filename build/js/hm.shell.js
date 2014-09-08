@@ -22,7 +22,7 @@ hm.shell = (function (){
 		main_html: String()
 		  + '<header class="hm-shell-header">'
             + '<div class="hm-shell-header-menu-btn">=</div>'
-		    + '<div class="hm-shell-header-logo">Places</div>'
+		    + '<div class="hm-shell-header-logo">Outward</div>'
          + '</header>'
 		 + '<div class="hm-shell-menu"></div>'
 		 + '<div class="hm-shell-map"></div>'
