@@ -3,7 +3,8 @@ var connectHello,
 	http   = require( 'http' ),
 	express = require('express'),
 	app = express(),
-	server = http.createServer(app);
+	server = http.createServer(app),
+	port = process.env.port || 3000;
 
 app.configure( function() {
 	app.use(express.bodyParser());
@@ -28,7 +29,7 @@ app.get('/', function(request, response) {
 	response.redirect('/index.html');
 });
 
-server.listen(3000);
+server.listen(port);
 console.log(
 	'Express server listening on port %d in %s mode',
 	server.address().port, app.settings.env);
