@@ -19,14 +19,19 @@
 	background-color: #eee;
 }
 
-.hm-map-label {	
+.hm-map-label-container {	
 	font-size: 18px;
-	margin-left: -12px;
+	width: 30px;
+	color: #666;
 	background-color: #fff;
-	opacity: .7;
-	padding: 6px;
-	border-radius: 3px;
+	padding-top:6px;
+	padding-bottom:6px;
+	line-height: 1;
+	border-radius: 15px 15px 0 15px;
+	border: 1px solid #ccc;
+	text-align: center;	
 }
+
 
 .hm-map-places-place {
 	margin: 10px;

@@ -12,15 +12,15 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 			  files: {
-			    'public/javascripts/app.min.js': ['public/js/*.js']
+			    'public/js/hm.min.js': ['public/js/hm*.js']
 			  }
 			}
 		},
 		cssmin: {
 			compress: {
 			    files: {
-			      'public/stylesheets/app.min.css': [
-			      	'public/css/*.css', 
+			      'public/css/hm.min.css': [
+			      	'public/css/hm*.css', 
 			      ]
 			    }
 			  }

@@ -30,6 +30,8 @@ hm.map = (function() {
               + '</div>'
 		    + '<a class="hm-map-places-place-remove" href="#">x</a>'
 			+ '</div>',
+		marker_label_html: String() 
+			+ '<div class="hm-map-label-container"></div>',
 		map_zoom: 14,
 		search_distance: 16093,
 		marker_label_class: 'hm-map-label',
@@ -122,6 +124,14 @@ hm.map = (function() {
 		//initialize places
 		stateMap.places = new google.maps.places.PlacesService(stateMap.map);
 
+		//Add a symbol
+		stateMap.markerIcon = {path: google.maps.SymbolPath.CIRCLE,
+							   scale: 4,
+							   strokeWeight: 1,
+							   strokeColor: "#333",
+							   fillColor: "#666",
+							   fillOpacity: 1};
+
 	};
 
 
@@ -131,12 +141,13 @@ hm.map = (function() {
 		var map = stateMap.map,
 			location = new google.maps.LatLng(lat, lng),
 			marker;
-
+		
 		marker = new MarkerWithLabel({
 			map: map,
 			position: location,
 			draggable: false,
-			labelAnchor: google.maps.Point(25, 0),
+			icon: stateMap.markerIcon,
+			labelAnchor: new google.maps.Point(32, 32),
 			labelContent: "",
 			labelClass: configMap.marker_label_class
 		});
@@ -206,9 +217,13 @@ hm.map = (function() {
 	};
 	
 
-	setMarkerLabel = function(id, label) {		
-		var marker = stateMap.markers[id];
-		marker.set('labelContent', label);
+	setMarkerLabel = function(id, label) {
+		var label_html,
+			marker = stateMap.markers[id];
+		label_html = $(configMap.marker_label_html);
+		label_html.html(label);
+		console.log(label_html);
+		marker.set('labelContent', label_html[0].outerHTML);
 	};
 
 
@@ -297,8 +312,7 @@ hm.map = (function() {
 					position: latlng,
 					title: origin_addr,
 					map: stateMap.map,
-					zIndex: 99999,
-					icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+					zIndex: 99999
 					});
 				
 				var request = {
@@ -334,6 +348,8 @@ hm.map = (function() {
 		$mapArea.html(configMap.base_html);
 		setJqueryMap();
 		initMap();
+
+		
 		
 	};
 	
